@@ -12,7 +12,7 @@ setup(
     download_url='https://github.com/javaguirre/pyhubble/tarball/0.1',
     license=open('LICENSE.txt').read(),
     description='A python client for hubble',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=['requests'],
     keywords=['hubble'],
     classifiers=[],
