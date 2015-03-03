@@ -47,19 +47,14 @@ class Hubble(object):
         if not isinstance(data, dict):
             valid_data = HubbleData(**data)
 
-        try:
-            response = requests.post(
-                self.url,
-                data=valid_data.as_dict()
-            )
+        response = requests.post(
+            self.url,
+            data=valid_data.as_dict()
+        )
 
-            if response.status_code != self.HTTP_OK:
-                raise requests.exceptions.ConnectionError(
-                    'The connection is not OK'
-                )
-        except requests.exceptions.ConnectionError:
+        if response.status_code != self.HTTP_OK:
             raise requests.exceptions.ConnectionError(
-                'There is no connection to %s' % self.url
+                'The connection is not HTTP 200 OK'
             )
 
     def increment(self, label, column=0):
