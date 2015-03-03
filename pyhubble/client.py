@@ -43,7 +43,9 @@ class Hubble(object):
         if not data:
             return False
 
-        valid_data = HubbleData(**data)
+        valid_data = data
+        if not isinstance(data, dict):
+            valid_data = HubbleData(**data)
 
         try:
             response = requests.post(
