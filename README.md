@@ -2,8 +2,11 @@
 
 Python client for [hubble](https://github.com/jaymedavis/hubble), the terminal dashboard
 
-    pip install pyhubble
+![1427049686](https://cloud.githubusercontent.com/assets/488556/6770784/8305fb58-d0cb-11e4-82f7-e2932671da39.png)
 
+## Installation
+
+    pip install pyhubble
 
 ## Usage
 
